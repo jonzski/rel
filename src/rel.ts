@@ -2,13 +2,22 @@ import { Client } from "discord.js";
 import { config } from "./config";
 import { commands } from "./commands";
 import { deployCommands } from "./deploy-commands";
+import { REST, Routes } from "discord.js";
+
+const token = config.TOKEN;
+const clientId = config.CLIENT_ID;
+const guildId = config.GUILD_ID;
+
+const rest = new REST().setToken(token);
+
+
 
 const client = new Client({
   intents: ["Guilds", "GuildMessages", "DirectMessages"],
 });
 
 client.once("ready", () => {
-  console.log("Discord bot is ready! 🤖");
+  console.log("Rel is ready! 🤖");
 });
 
 client.on("guildCreate", async (guild) => {
@@ -25,4 +34,6 @@ client.on("interactionCreate", async (interaction) => {
   }
 });
 
-client.login(config.DISCORD_TOKEN);
+
+client.login(token);
+
