@@ -1,8 +1,7 @@
 {
   "name": "rel",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An open source bot for my Discord Server",
   "dependencies": {
     "discord-api-types": "^0.37.61",
     "discord.js": "^14.14.1",

@@ -1,16 +1,9 @@
 import { Client } from "discord.js";
 import { config } from "./config";
-import { commands } from "./commands";
+import { commands } from "./commands/commands";
 import { deployCommands } from "./deploy-commands";
-import { REST, Routes } from "discord.js";
 
 const token = config.TOKEN;
-const clientId = config.CLIENT_ID;
-const guildId = config.GUILD_ID;
-
-const rest = new REST().setToken(token);
-
-
 
 const client = new Client({
   intents: ["Guilds", "GuildMessages", "DirectMessages"],
